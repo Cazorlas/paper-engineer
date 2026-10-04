@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paperclip Privacy Policy</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1d1d1f; --muted: #5f6368; --accent: #c2410c; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #111317; --fg: #e8eaed; --muted: #9aa0a6; --accent: #fb923c; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px; }
+  h1 { margin: 0 0 4px; } .sub { color: var(--muted); margin: 0 0 32px; }
+  a { color: var(--accent); } li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="sub">Paperclip, the publishing tool of the YouTube channel Kỹ sư giấy (@paper.engineer).
+    Effective 5 October 2026.</p>
+
+  <h2>Who uses it</h2>
+  <p>Paperclip is used only by the owner of the channel Kỹ sư giấy, on their own computer. It has no other users and no
+  public sign-up.</p>
+
+  <h2>What data it accesses</h2>
+  <ul>
+    <li>Through YouTube API Services, with the owner's consent given in Google's sign-in screen: permission to upload
+      videos to the owner's channel (<code>youtube.upload</code>), and read access (<code>youtube.readonly</code>) used
+      only to read the owner's own channel name and the status of the videos the tool uploaded.</li>
+    <li>Public information about GitHub repositories (name, description, star counts, README), which is the subject of
+      each video.</li>
+  </ul>
+  <p>It does not access, collect or process data about any other YouTube user, viewer or channel.</p>
+
+  <h2>How data is stored</h2>
+  <ul>
+    <li>The OAuth tokens Google issues are stored only in a file on the owner's computer. They are never sent to any
+      server other than Google's, never shared and never published.</li>
+    <li>The tool keeps a small local record of each upload (video id, link, privacy status, upload time) on the same
+      computer.</li>
+    <li>No data is sold, shared with third parties or used for advertising.</li>
+  </ul>
+
+  <h2>Google and YouTube</h2>
+  <p>Paperclip uses YouTube API Services. By using it, the channel owner agrees to the
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+  <h2>Revoking access</h2>
+  <p>The channel owner can revoke Paperclip's access at any time at
+    <a href="https://myaccount.google.com/permissions">Google Account → Security → Third-party connections</a>. The
+    owner can also delete the local token file; nothing else holds the data.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: open an issue at
+    <a href="https://github.com/Cazorlas/paper-engineer/issues">github.com/Cazorlas/paper-engineer</a>.</p>
+
+  <p><a href="index.html">About Paperclip</a></p>
+</main>
+</body>
+</html>

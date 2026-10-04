@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paperclip</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1d1d1f; --muted: #5f6368; --accent: #c2410c; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #111317; --fg: #e8eaed; --muted: #9aa0a6; --accent: #fb923c; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 16px; }
+  h1 { margin: 0 0 4px; } .sub { color: var(--muted); margin: 0 0 32px; }
+  a { color: var(--accent); } li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Paperclip</h1>
+  <p class="sub">A private publishing tool for the YouTube channel
+    <a href="https://www.youtube.com/@paper.engineer">Kỹ sư giấy (@paper.engineer)</a>.</p>
+
+  <h2>What it is</h2>
+  <p>Paperclip is a command-line tool that runs only on the channel owner's own computer. It turns a public GitHub
+  repository into a short Vietnamese explainer video (vertical, under 3 minutes). It is not a public service, has no
+  website login and no other users.</p>
+
+  <h2>How it uses the YouTube Data API</h2>
+  <ul>
+    <li>The channel owner reviews and approves every script and every finished video before upload.</li>
+    <li>The tool then calls <code>videos.insert</code> (scope <code>youtube.upload</code>) to upload that one approved
+      video to the owner's own channel, with its title, description and hashtags, declared as not made for kids and as
+      containing synthetic media (the narration is a synthetic voice).</li>
+    <li>With <code>youtube.readonly</code> it reads only the owner's own channel name, to confirm the sign-in is the
+      right channel, and the status of the videos it uploaded.</li>
+    <li>It uploads 1 to 3 videos per day. It does not access any other user's channel or data.</li>
+  </ul>
+
+  <p><a href="privacy.html">Privacy policy</a></p>
+</main>
+</body>
+</html>
