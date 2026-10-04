@@ -49,14 +49,26 @@
 
   <h2>Revoking access</h2>
   <p>The channel owner can revoke Paperclip's access at any time at
-    <a href="https://myaccount.google.com/permissions">Google Account → Security → Third-party connections</a>. The
-    owner can also delete the local token file; nothing else holds the data.</p>
+    <a href="https://myaccount.google.com/permissions">Google Account → Security → Third-party connections</a>.</p>
+
+  <h2>Data retention and deletion</h2>
+  <ul>
+    <li>Paperclip keeps no data on any server. Everything it stores (the OAuth tokens and the local upload records) is
+      in files on the owner's computer.</li>
+    <li>To delete it, the owner deletes the folder <code>%APPDATA%\paperclip\youtube</code> and the job folders; nothing
+      else holds a copy.</li>
+    <li>When access is revoked in the Google Account, the stored tokens stop working at once, and the tool deletes no
+      data on YouTube by itself.</li>
+    <li>Data obtained from YouTube API Services (the channel name and video status) is kept no longer than needed to
+      confirm an upload and is refreshed or deleted within 30 days, as required by the YouTube API Services Developer
+      Policies.</li>
+  </ul>
 
   <h2>Contact</h2>
   <p>Questions about this policy: open an issue at
     <a href="https://github.com/Cazorlas/paper-engineer/issues">github.com/Cazorlas/paper-engineer</a>.</p>
 
-  <p><a href="index.html">About Paperclip</a></p>
+  <p><a href="index.html">About Paperclip</a> · <a href="terms.html">Terms of Service</a></p>
 </main>
 </body>
 </html>
